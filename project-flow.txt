@@ -1,0 +1,64 @@
+1. Create a project structure like all the files needed in our project.
+-- Use template.py code
+
+2. Write code for pyproject.toml and setup.py to import local packages.
+-- Use Learnings.txt to learn more on these 2 files
+
+3. Create your conda virtual environment and activate It
+-- conda create -n vehicle python=3.10 -y
+-- conda activate vehicle
+
+4. To check all available packages inside your environment.
+-- pip list
+
+5. add all packages required to build your project in requirements.txt and run them.
+-- pip install -r requirements.txt
+
+-------------------------MongoDB Setup----------------------------------------------
+
+1. Go to mongo DB atlas and create your account.
+2. Inside your account create a new project named Vehicle Project.
+3. Inside your project create a new cluster and give it any name.  
+4. db user : ankit109dew_db_user
+   db pass : FTmBdyR56bbeHeoE
+5. Go to the left panel and check for network access and allow traffic from anywhere.
+6. Inside the cluster there is application development section where I need to select python and click 
+   on add connection string.
+   connection string = mongodb+srv://<db_username>:<db_password>@vehicle-data-cluster.kj7bhro.mongodb.net/?retryWrites=true&w=majority&appName=Vehicle-Data-Cluster
+7. Create a notebook folder and a mogodb.ipynb file inside it. Select python kernel with vehicle.
+8. Add the vehicle_data.csv inside your nootbook folder.
+9. Write code to push the vehicle_data.csv file to mongoDB.
+10. Go Inside your mongoDB and inside your project look for collections there you can find our
+    vehicle_data.
+
+--------------------logging, exception and notebooks-------------------------------------
+
+1. Add the logging code for file and console log handlers in src/logger/__init__.py file
+2. Test it in demo.py file
+3. Add the code to exception/--init.py file to add the exceptions.
+4. create a new experiment folder for your project inside notebook directory.
+
+---------------------- Data Ingestion ------------------------------------------------------
+
+
+
+
+AWS_aCCESS_KEY_ID= AKIAZFKUWPWWSEDL4EFA
+PASSWORD = aM0LM6FwIBKoAMYA/7MjdclbXYSHlgZw4HoEAUUe
+
+$env:AWS_ACCESS_KEY_ID = "AKIAZFKUWPWWSEDL4EFA"
+$env:AWS_SECRET_ACCESS_KEY = "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"
+aM0LM6FwIBKoAMYA/7MjdclbXYSHlgZw4HoEAUUe
+
+
+echo $env:AWS_ACCESS_KEY_ID
+echo $env:AWS_SECRET_ACCESS_KEY
+
+aws_storage.py
+
+[Environment]::SetEnvironmentVariable("AWS_ACCESS_KEY_ID", "AKIAZFKUWPWWSEDL4EFA", "User")
+[Environment]::SetEnvironmentVariable("AWS_SECRET_ACCESS_KEY", "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", "User")
+
+
+ecr_name = vehicleproj
+ecr uri = 629927214509.dkr.ecr.us-east-1.amazonaws.com/vehicleproj

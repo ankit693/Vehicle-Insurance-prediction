@@ -1,0 +1,19 @@
+setup.py
+
+This file is used to create packages which can be used in other projects as well. Normally if we don't use setup.py then we could then also import functions in the current project but not in other projects.
+So this is where setup.py is useful
+also we use pip install . instead of pip install src because we haven't uploaded our functions to pyPI like pandas and numps. Our functions resides locally so we use pip install .
+
+-------------------------------------------------------------------------------------------------------
+
+pyproject.toml
+
+It is a new convention style of doing what setup.py does.
+
+--------------------------------------------------------------------------------------------------------
+
+-e . (editable)
+instead of doing pip install . use pip install -e .
+This allows us to use the modified versions of code as well but in . output won't change even if the code has modified.
+
+---------------------------------------------------------------------------------------------------------
